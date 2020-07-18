@@ -16,7 +16,7 @@
 ## Future Plans 
 - [] Combine scripts to one whole program
 - [] Fix persistient bugs
-- [] Add log for random image sorter to reference where original RImage# source file is located
+- [x] Add log for random image sorter to reference where original RImage# source file is located
 - [] Handle failed url requests for Image scraper
 - [] ...
 - [] ...
