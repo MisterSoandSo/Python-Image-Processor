@@ -4,10 +4,10 @@
 
 ## Avaliable Scripts
 1. [Duplicator Remover](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/Duplicator%20Remover) - Find and remove all duplicate photos
-2. [Orientation Sorter](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/Orientation%20Sorter) - Sort between landscape and potrait photos
-3. [Random Images](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/Random%20Images) - Randomly select n number of images in directory 
-4. [Image Scraper](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/Image%20Scraper) - Batch download images in a controlled setting
-5. 
+2. [Orientation Sorter](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/src/Orientation%20Sorter) - Sort between landscape and potrait photos
+3. [Random Images](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/srcRandom%20Images) - Randomly select n number of images in directory 
+4. [Image Scraper](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/src/Image%20Scraper) - Batch download images in a controlled setting
+5. [Text Extractor](https://github.com/MisterSoandSo/Python-Image-Processor/tree/master/src/Text%20Extractor) - Extract text from screen snip with Tesseract 
 ...
 
 ## Dependency
