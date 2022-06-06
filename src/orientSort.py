@@ -1,34 +1,8 @@
 #!/usr/bin/env python
-
-import os, sys
-import glob
+from backend import get_filelist, mk_dir,horizontal_pixels
+import os
 import shutil
-from PIL import Image
 
-DEBUG = True
-
-# Recursively read in all folders in current directory and return list of file locations
-def get_filelist():
-    file_list = []
-    for filename in glob.iglob('**/*.jpg', recursive=False): 
-        file_list.append(filename)
-    if DEBUG == True: print("Number of files loaded: ",len(file_list))
-    return file_list
-
-# Create folder if it does not exist in the directory and return path
-def mk_dir(parent_dir, directory):
-    path = os.path.join(parent_dir, directory)
-    if not os.path.exists(path):
-        os.makedirs(path)
-    return path
-
-# Return true or false on width greater than height
-def horizontal_pixels(filepath):
-    try:
-        width, height = Image.open(filepath).size
-        return width>height
-    except IOError:
-        pass
 
 #Find out whether the image is portait or landscape in current directory
 def orientation():

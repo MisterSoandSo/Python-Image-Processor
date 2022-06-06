@@ -1,15 +1,13 @@
-#!/usr/bin/env python
-
-import os
 import glob
-from PIL import Image
+import os
 import shutil
+import time
 import random
 
-DEBUG = True
+from PIL import Image
 
 # Recursively read in all folders in current directory and return list of file locations
-def get_filelist():
+def get_filelist(DEBUG = False):
     file_list = []
     for filename in glob.iglob('**/*.jpg', recursive=True): 
         file_list.append(filename)
@@ -23,9 +21,10 @@ def mk_dir(parent_dir, directory):
         os.makedirs(path)
     return path
 
-# Copy all all files in list to destination
+# Copy all files in list to destination
 def cp_files(cp_list,file_list, dest):
-    file = open("RandSelect/original.txt","w") 
+    ofname = dest + "/original_file_loc_"+ str(time.time()) + ".txt"
+    file = open(ofname,"w") 
     for index in cp_list:
         filename = "RImage" + str(index) + ".jpg"
         path = os.path.join(dest, filename)
@@ -33,9 +32,10 @@ def cp_files(cp_list,file_list, dest):
         shutil.copy(file_list[index], path)
     file.close()
 
-if __name__ == "__main__":
-    numImage = 3000
-    file_list = get_filelist()
-    randomIndex = random.sample(range(len(file_list)), numImage)
-    print("Number of random images selected:", numImage)
-    cp_files(randomIndex, file_list, mk_dir(os.getcwd(),"RandSelect"))
+# Return true or false on width greater than height
+def horizontal_pixels(filepath):
+    try:
+        width, height = Image.open(filepath).size
+        return width>height
+    except IOError:
+        pass
