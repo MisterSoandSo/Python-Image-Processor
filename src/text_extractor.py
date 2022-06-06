@@ -25,7 +25,6 @@ def get_pos():
                 click = False
             else:
                 print('Mouse clicked at ({0}, {1})'.format(x, y))
-                #get_Words_from_Image(x1,y1,x,y)
                 temp = store_Words_from_Image(x1,y1,x,y)
                 print(temp[0])
                 return False
@@ -34,4 +33,4 @@ def get_pos():
 
 if __name__ == '__main__':
     get_pos()
-    #print(pytesseract.image_to_string(r'C:\Users\acs21\Desktop\MCC\Screenshot 2021-04-09 120303.png'))
+ 
